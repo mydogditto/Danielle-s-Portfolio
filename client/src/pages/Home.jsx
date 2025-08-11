@@ -12,16 +12,20 @@ const timelineItems = [
     image: nicksBricks
   },
   {
-    year: '2024',
+    year: '2025',
     title: 'Spooler',
     subtitle: 'MongoDB + React',
     description: 'A production-ready tool with clean UX and clear content hierarchy.',
+    image: "",
+    href: "https://github.com/mydogditto"
   },
   {
-    year: '2023',
+    year: '2025',
     title: 'Bubblr',
     subtitle: 'CSS Interface + MySQL',
     description: 'Custom interface with focus on usability and visual clarity.',
+    image: "",
+
   },
 
 ];
