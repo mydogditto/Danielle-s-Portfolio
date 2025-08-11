@@ -5,6 +5,7 @@ import { AppBar, Toolbar, Button } from "@mui/material";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Footer from './components/Footer';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </Router>
 
   );
