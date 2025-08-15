@@ -7,6 +7,9 @@
     "build": "webpack --watch",
     "start": "nodemon server/index.js"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
