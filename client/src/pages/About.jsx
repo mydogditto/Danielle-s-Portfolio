@@ -2,7 +2,45 @@ import * as React from 'react';
 import { Box, Container, Typography, Grid, Button } from '@mui/material';
 import aboutImg from '../components/assets/Mara wedding.jpeg';
 import resume from '/Danielle-Goldberg-Resume.pdf'
-export default function AboutSection() {
+import ArtNouveauTimeline from '../components/ArtNouveauTimeline';
+import nicksBricks from '/client/src/components/assets/Nicks Bricks.jpg'
+
+const timelineItems = [
+  {
+    year: '2025',
+    title: 'Design Logo',
+    subtitle: 'Designed Logo for Nicks Bricks',
+    description: 'The logo uses the Iron Man of War font and incorberates the idea of a cracklin stove',
+    image: nicksBricks
+  },
+  {
+    year: '2025',
+    title: 'LetsGeaux',
+    subtitle: 'Letsgeauxnola.com',
+    description: 'Lets Geaux is designed to help people coming to New Orleans orginize there trip.',
+    image: ''
+  },
+  {
+    year: '2025',
+    title: 'Spooler',
+    subtitle: 'MongoDB + React',
+    description: 'A production-ready tool with clean UX and clear content hierarchy.',
+    image: "",
+    href: "https://github.com/mydogditto"
+  },
+  {
+    year: '2025',
+    title: 'Bubblr',
+    subtitle: 'CSS Interface + MySQL',
+    description: 'Custom interface with focus on usability and visual clarity.',
+    image: "",
+
+  },
+
+];
+
+
+function AboutSection() {
   return (
     <Box
       component="section"
@@ -33,14 +71,9 @@ export default function AboutSection() {
               About Me
             </Typography>
             <Typography variant="body1" sx={{ mb: 3 }}>
-              I design and build digital experiences that balance beauty, clarity, and accessibility.
-              My work spans intuitive app interfaces and thoughtful print design, with an eye for
-              detail that makes each project stand out.
+              I merge full-stack web development with digital and print design to create cohesive, high-impact experiences. Accessibility is built in from the start—clear hierarchy, readable type, strong contrast, semantic structure, and keyboard-friendly interactions—so my work is usable by more people in more contexts. Whether I’m coding a complex application, designing an elegant interface, or producing print materials, I bring the same focus on clarity, usability, and visual appeal.
             </Typography>
-            <Typography variant="body1" sx={{ mb: 3 }}>
-              With a foundation in full-stack development and a deep appreciation for visual
-              storytelling, I bring concepts to life from the first sketch to the finished product.
-            </Typography>
+
             <Button
               variant="contained"
               color="secondary"
@@ -50,9 +83,13 @@ export default function AboutSection() {
             >
               Download Resume
             </Button>
+            <Container sx={{ py: 6 }}>
+              <ArtNouveauTimeline title="Resume Timeline" items={timelineItems} />
+            </Container>
           </Grid>
         </Grid>
       </Container>
     </Box>
   );
 }
+export default AboutSection
