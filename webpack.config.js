@@ -2,13 +2,13 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './client/src/index.jsx',          // ensure a single named entry
+  entry: '/client/src/index.jsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[contenthash].js',    // <-- unique filename per entry
-    chunkFilename: '[name].[contenthash].js', // <-- unique filename for lazy chunks
-    publicPath: '/',                        // for React Router
-    clean: true,                            // clears old files
+    filename: '[name].[contenthash].js',
+    chunkFilename: '[name].[contenthash].js',
+    publicPath: '/',
+    clean: true,
   },
   module: {
     rules: [
@@ -22,10 +22,19 @@ module.exports = {
     new HtmlWebpackPlugin({ template: './client/index.html' }),
   ],
   optimization: {
-    splitChunks: { chunks: 'all' },         // vendors in separate chunks
-    runtimeChunk: 'single',                 // separate runtime (avoids collisions)
+    splitChunks: { chunks: 'all' },
+    runtimeChunk: 'single',
   },
-  mode: 'production',                       // or set via CLI
+  mode: 'production',
   devtool: false,
   devServer: { historyApiFallback: true },
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+  },
+  performance: {
+    hints: 'warning',          // or false to disable completely
+    maxEntrypointSize: 512000, // 500 KB
+    maxAssetSize: 512000,
+  },
 };

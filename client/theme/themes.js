@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material/styles';
-import '@fontsource/limelight';       // Limelight font (headings)
-import '@fontsource/lato/400.css';    // Lato Regular
-import '@fontsource/lato/700.css';    // Lato Bold
+import '@fontsource/limelight/400.css';
+import '@fontsource/lato/400.css';
+import '@fontsource/lato/700.css';
 
 const theme = createTheme({
   typography: {
