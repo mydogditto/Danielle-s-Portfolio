@@ -21,7 +21,7 @@ export default function AboutSection() {
       <Container>
         <Grid container spacing={6} alignItems="center">
           {/* Image */}
-          <Grid item xs={12} md={5}>
+          <Grid xs={12} md={5}>
             <Box
               component="img"
               src={aboutImg}
@@ -33,7 +33,7 @@ export default function AboutSection() {
           </Grid>
 
           {/* Text */}
-          <Grid item xs={12} md={7}>
+          <Grid xs={12} md={7}>
             <Typography variant="h2" gutterBottom>About Me</Typography>
 
             <Typography variant="body1" sx={{ mb: 3 }}>
