@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box, Container, Typography, Grid, Button } from '@mui/material';
-import aboutImg from '/public/assets/tinified/Mara wedding.png';
+import Headshot from '/public/assets/tinified/Mara wedding.png';
 //import nicksBricks from '/public/components/assets/tinified/Nick-Bricks.png'; // if used in your JSON
 
 const ArtNouveauTimeline = React.lazy(() => import('../components/ArtNouveauTimeline'));
@@ -24,7 +24,7 @@ export default function AboutSection() {
           <Grid xs={12} md={5}>
             <Box
               component="img"
-              src={aboutImg}
+              src={Headshot}
               alt="Danielle Goldberg"
               loading="lazy"
               decoding="async"
@@ -47,7 +47,7 @@ export default function AboutSection() {
             <Button
               variant="contained"
               color="secondary"
-              href="/Danielle-Goldberg-Resume.pdf"
+              href="/public/Danielle-Goldberg-Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               sx={{ mb: 4 }}
