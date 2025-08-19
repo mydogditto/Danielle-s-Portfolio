@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Box, Container, Typography, Grid, Button } from '@mui/material';
 
-//import nicksBricks from '/public/components/assets/tinified/Nick-Bricks.png';
 
 const ArtNouveauTimeline = React.lazy(() => import('../components/ArtNouveauTimeline'));
 
