@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { Box, Container, Typography, Grid, Button } from '@mui/material';
+import aboutImg from '/public/assets/tinified/Mara wedding.png';
+//import nicksBricks from '/public/components/assets/tinified/Nick-Bricks.png'; // if used in your JSON
 
 const ArtNouveauTimeline = React.lazy(() => import('../components/ArtNouveauTimeline'));
 
@@ -19,7 +21,7 @@ export default function AboutSection() {
       <Container>
         <Grid container spacing={6} alignItems="center">
           {/* Image */}
-          <Grid xs={12} md={5}>
+          <Grid item xs={12} md={5}>
             <Box
               component="img"
               src={aboutImg}
@@ -31,7 +33,7 @@ export default function AboutSection() {
           </Grid>
 
           {/* Text */}
-          <Grid xs={12} md={7}>
+          <Grid item xs={12} md={7}>
             <Typography variant="h2" gutterBottom>About Me</Typography>
 
             <Typography variant="body1" sx={{ mb: 3 }}>

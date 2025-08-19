@@ -22,10 +22,10 @@ module.exports = {
     new HtmlWebpackPlugin({ template: './client/index.html' }),
   ],
   optimization: {
-    splitChunks: { chunks: 'all' },
-    runtimeChunk: 'single',
+    splitChunks: { chunks: 'all' },         // vendors in separate chunks
+    runtimeChunk: 'single',                 // separate runtime (avoids collisions)
   },
-  mode: 'production',
+  mode: 'production',                       // or set via CLI
   devtool: false,
   devServer: { historyApiFallback: true },
 };
