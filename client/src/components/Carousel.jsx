@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Box, useTheme, IconButton } from '@mui/material';
 
-// Tiny inline arrow icons (avoid @mui/icons-material weight)
 function ArrowLeft(props) {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" {...props}>
